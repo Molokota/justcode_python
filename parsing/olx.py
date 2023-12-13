@@ -34,5 +34,3 @@ for i in range(1, 4):
         else:
             print("нет описания")
             break
-        # olx = BeautifulSoup(response.text, "lxml")
-        # page = olx.find_all("div", class_="css-qfzx1y")
