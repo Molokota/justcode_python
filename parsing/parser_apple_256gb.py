@@ -1,5 +1,4 @@
 import requests
-from bs4 import BeautifulSoup
 import json
 
 url = f"https://api.technodom.kz/katalog/api/v1/products/category/smartfony?city_id=5f5f1e3b4c8a49e692fefd70&limit=24&brands=apple&sorting=score&price=0"
