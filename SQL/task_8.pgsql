@@ -13,3 +13,4 @@ WHERE order_details.quantity < (SELECT AVG(quantity) FROM order_details);
 SELECT DISTINCT product_name FROM products 
 JOIN order_details USING (product_id)
 WHERE order_details.quantity = 10
+
