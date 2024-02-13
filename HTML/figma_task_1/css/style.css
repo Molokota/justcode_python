@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    /* background-color: black; */
+}
+.containder {
+    margin: auto;
+    max-width: 1280px;
+    
+}
+
+main {
+    background-color: #F4F9E2;
+    width: 1117px;
+    height: 840px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo span {
+    color: #62D0DF;
+    font-size: 24px;
+}
+
+.navigator {
+    font-size: 14px;
+
+}
+
+.navigator nav ul {
+    display: flex;    
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list-link{
+    color: #22356f;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+    font-weight:  600;
+}
+
+.nav-list-item {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    width: 708px;
+    height: 50px;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.contacts-link {
+    padding: 10px 15px;
+    background-color: #62D0DF;
+    border-radius: 50px;
+    color: white;
+    font-size: 14px;
+}
+
+.oval {
+    position: absolute;
+    width: 807.71px;
+    height: 544.93px;
+    /* top: 70px;
+    right: -60px;     */
+    top: -170.66px;
+    left: 650.93px;
+
+    background-color: #EDFDFF;
+    border-radius: 312.159px;
+    transform: matrix(-0.5, 0.87, 0.87, 0.5, 0, 0);
+}
+
+
+.main-text {
+    width: 484px;
+    height: 64px;
+    top: 241px;
+    left: 179px;
+    /* background-color: red; */
+    margin-top: 150px;  
+}
+.main-text span{
+    color: #62D0DF;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.main-text2 {
+    width: 520px;
+    height: 167px;
+}
+
+.main-text2 p{
+    /* background-color: #cedf62; */
+    font-size: 48px;
+    color: #22356F;
+    line-height: 53.44px;
+    font-weight: 700;
+}
+
+
+.main-text3 {
+    width: 469px;
+    height: 161px;
+    /* background-color: #df62cc; */
+}
+
+.main-text3 p{
+    font-size: 24px;
+    line-height: 42.19px;
+    color: #22356F;
+}
+
+.click {
+    margin-top: 70px;
+    display: flex;
+    height: 54px;
+}
+
+
+.click-1{
+    background-color: #F9B640;
+    text-align: center;
+    margin-left: 1px;
+    width: 150px;
+    list-style-type: none;
+}
+.click-1 a {
+    text-decoration: none;
+    line-height: 50px;
+    color: white;
+}
+
+
+.click-2{
+    margin-left: 30px;
+    text-align: center;
+    width: 150px;
+    list-style-type: none;
+}
+
+.click-2 a {
+    line-height: 50px;
+    text-decoration: none;
+    color: #F9B640;
+}
