@@ -15,12 +15,8 @@ def post(request):
     # return HttpResponse('<h1>Страница с постами</h1>')
 
 def ful_post(request, post_id):
-    # posts = Post.objects.get(id=post_id)
-
     posts = Post.objects.get(id=post_id)
-    # print(posts.title)
-    # for posts in posts:
-        # print(f"{posts.id}.{posts.title}.{posts.genre}")
+    
     data = {
         'image': posts.image,
         'title': posts.title,
