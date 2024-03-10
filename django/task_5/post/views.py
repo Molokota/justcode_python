@@ -14,11 +14,11 @@ def post(request):
     return render(request, 'posts.html', context=data)
     # return HttpResponse('<h1>Страница с постами</h1>')
 
+# Вывод статей по id в url http://.../post/id/
 def ful_post(request, post_id):
     posts = Post.objects.get(id=post_id)
     
     data = {
-        'image': posts.image,
         'title': posts.title,
         'author': posts.author,
         'genre': posts.genre,
