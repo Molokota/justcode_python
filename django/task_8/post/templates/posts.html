@@ -1,0 +1,18 @@
+{% extends "_base.html" %}
+{% load static %}
+
+
+{% block content %}
+    {% for post in posts %}
+        <span>Динамическая часть</span>
+        <h1>{{ post.title }}</h1>
+        <h4>Автор: {{ post.author }}</h4>
+        <h4>Жанр: {{post.genre }}</h4>
+        <p>{{ post.description }}</p>
+        <li><a href="{{ get_absolute_url }}"> {{ post.title }} </a></li>
+        <img src="{{ image }}" alt="img">
+        <hr>
+
+    {% endfor %}
+{% endblock content %}
+
