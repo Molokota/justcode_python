@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+    <span>Динамическая часть</span>
+    <img src="{{ image }}" alt="{{ title }}">
+    <h1>{{ title }}</h1>
+    <h4>Автор: {{ author }}</h4>
+    <h4>Жанр: {{ genre }}</h4>
+    <p>{{ description }}</p>
+    <h4>Дата создания: {{ time_created }}</h4>
+
+{% endblock content %}
