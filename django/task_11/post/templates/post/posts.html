@@ -1,0 +1,22 @@
+{% extends "post/_base.html" %}
+{% load static %}
+
+
+{% block content %}
+  
+
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'post/css/index.css' %}"> -->
+    {% for post in posts %}
+    
+        <span>Динамическая часть</span>
+        <h1>{{ post.title }}</h1>
+        <h4>Автор: {{ post.author }}</h4>
+        <h4>Жанр: {{post.genre }}</h4>
+        <p>{{ post.description }}</p>
+        <li><a href="{{ post.get_absolute_url }}"> ПОДРОБНЕЕ </a></li>
+        <img src="/media/{{ post.image }}" alt="img" width="250" height="358">
+        <hr>
+    {% endfor %}
+{% endblock content %}
+
+
