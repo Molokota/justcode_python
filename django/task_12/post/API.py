@@ -13,7 +13,7 @@ from rest_framework.permissions import IsAuthenticated
 class PostAPIList(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    # Аунтификация
+    # Аутентификация
     # permission_classes = (IsAuthenticated,)
     # фильтрация
     filter_backends = [DjangoFilterBackend]
