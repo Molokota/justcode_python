@@ -1,0 +1,15 @@
+.img_full {
+    /* border: 3px dashed rgb(0, 0, 0); */
+    width: 100%;
+    height: 400px;
+    /* background-color: rgb(129, 135, 60); */
+}
+
+.title_full {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.text_shortstory {
+    margin-left: 20px;
+}

@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/login.css' %}">
+    <title>Авторизация</title>
+</head>
+<body>
+    
+
+<div class="block_base">
+    <div class="login_all">
+        <div class="ribbon"></div>
+        <div class="login">
+            <h1>Авторизация</h1>
+            <form method="post">
+                <div>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                </div>
+                <button type="submit">Войти</button>
+
+                {% if not user.is_authenticated %}<!-- скрывать если пользователь уже авторизирован -->
+                <p>
+                    <p>Нет аккаунта? <a href="/accounts/registration/">Регистрация.</a></p>
+                    <p>Вернуться на <a href="/">главную</a> страницу.</p>
+                </p>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
