@@ -1,0 +1,45 @@
+
+.post {
+    display: flex;
+    /* border: 1px dashed rgb(0, 0, 0); */
+    margin-top: 15px;
+}
+
+
+.img {
+    /* border: 3px dashed red; */
+    height: 358px;
+    width: 250px;
+    /* background-color: rgb(0, 0, 0); */
+    margin: 30px;
+}
+
+.img img {
+    width: 100%; 
+    height: auto; 
+
+  }
+
+
+.description {
+    /* background-color: rgb(163, 13, 133); */
+    /* border: 3px dashed rgb(7, 10, 232); */
+    display: inline;
+    width: 75%;
+    margin-right: 10px;
+    
+}
+
+.detailed {
+    /* border: 1px dashed rgb(120, 120, 120); */
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+/* обложка */
+
+
+/*  */
