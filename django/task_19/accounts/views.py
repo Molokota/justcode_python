@@ -37,7 +37,7 @@ class RegisterApi(generics.GenericAPIView):
         return response.Response(user_data.data)
 
 class AccountDetailApi(generics.RetrieveUpdateDestroyAPIView):
-    ''' запрос получения данных пользователея по id через api'''
+    ''' запрос получения данных пользователея по id через api (get, put, delete)'''
     queryset = User.objects.all()
     serializer_class = UserSerializer
     
