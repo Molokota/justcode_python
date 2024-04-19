@@ -1,0 +1,26 @@
+{% extends "post/_base.html" %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/my.css' %}">
+<p>личный кабинет
+        <br/>    
+        Nickname: {{ user.nickname }}
+        <br/>
+        Имя: {{ user.first_name }}
+        <br/>
+        Фамилия: {{ user.last_name }}
+        <br/>
+        Email: {{ user.email }}
+        <br/>
+        Телефон: {{ user.mobile_phone }}
+        <br/>
+        Ваш IP-адрес: {{ ip_address }}
+
+
+</p>
+
+{% endblock content %}
+
+

@@ -1,0 +1,58 @@
+.main {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(181, 181, 181); */
+    display: flex;
+}
+
+.category {
+    /* border: 3px dashed rgb(0, 0, 0); */
+    width: 25%;
+    margin-top: 1px;
+    /* background-color: rgb(233, 252, 23); */
+
+}
+
+.block_post {
+    display: inline;
+    /* border: 3px dashed rgb(0, 0, 0); */
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(181, 181, 181); */
+    /* border: 3px dashed rgb(72, 213, 126); */
+}
+
+
+.footer {
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(181, 181, 181); */
+    /* border: 3px dashed rgb(72, 213, 126); */
+}
+
+.footer img {
+    width: 100%; /* Чтобы изображение занимало всю доступную ширину блока */
+    height: auto; /* Автоматическое подстраивание высоты для сохранения пропорций */
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+
+}
+
+.carousel img {
+    width: 100%; 
+    height: auto;
+  }
+
+
+.list-group img {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    /* position: static; */
+}
