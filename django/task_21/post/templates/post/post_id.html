@@ -1,0 +1,35 @@
+{% extends "post/_base.html" %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'post/css/index.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'post/css/full_post.css' %}">
+
+<div class="block_post">
+    <div class="title_full">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div class="img_full">
+        <center><img src="{{ image }}" alt="{{ title }}" alt="img" width="250" height="358"></center>
+    </div>
+
+    <div class="text_shortstory">
+        <h4>Автор: {{ author }}</h4>
+        <h4>Жанр: {{ genre }}</h4>
+        <p>{{ description }}</p>
+        <p>Дата публикации: {{ time_created }}</p>
+    </div>
+
+
+    <div class="post">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.content }}</p>
+    </div>
+    
+
+    
+</div>
+
+{% endblock content %}

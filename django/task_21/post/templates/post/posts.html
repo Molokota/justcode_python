@@ -1,0 +1,53 @@
+{% extends "post/_base.html" %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'post/css/index.css' %}">
+
+
+    <div class="block_post">
+        {% for post in posts %}
+            <div class="post">
+                <div class="img">
+                    <img src="/media/{{ post.image }}" alt="img"> 
+                </div>
+                
+                <div class="description">
+                    <h1>{{ post.title }}</h1>
+                    <h6>Автор: {{ post.author }}</h6>
+                    <h6>Жанр: {{post.genre }}</h6>
+                    <h6>Категория:
+                    {% for categories in post.categories.all %}
+                         {{ categories.cat_name }},
+                    {% endfor %}</h6>
+                    <span>{{ post.description|slice:"0:620" }}.....</span>
+                    <hr>
+                    <div class="detailed">
+                        <div>
+                            <p>Дата публикации: {{ post.time_created }}</p>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="{{ post.get_absolute_url }}"><button class="btn btn-primary" type="button">ПОДРОБНЕЕ</button></a>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    
+        <!-- пагинация -->
+        
+            
+
+        <!-- /пагинация --> 
+    </div>
+    
+
+
+
+
+
+
+{% endblock content %}
+
+

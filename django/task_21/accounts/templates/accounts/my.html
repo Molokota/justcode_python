@@ -1,0 +1,91 @@
+{% extends "post/_base.html" %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/css/my.css' %}">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<div class="all_block">
+        <div class="title_account">
+                <center><h1>Личный кабинет</h1></center>
+        </div>
+        <div class="contener_baze">
+                <div class="contener_img_add">
+                        <div class="user_img">
+                                <center>
+                                <p><img src="{{ user_image_url }}" alt="Ваше изображение профиля" class="adaptive-image"></p>
+                                </center>
+                        </div>
+                        <div class="img_loading">
+                                <form method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        {{ form_img }}
+                                        <button type="submit">Загрузить изображение</button>
+                                </form> 
+                        </div>
+                </div>
+                <div class="contener_inf_user">
+                        <table>
+                                <tr>
+                                <td><b>Nickname:</b> {{ user.nickname }}</td>
+                                </tr>
+                                <tr>
+                                <td><b>Имя:</b> {{ user.first_name }}</td>
+                                </tr>
+                                <tr>
+                                <td><b>Фамилия:</b> {{ user.last_name }}</td>
+                                </tr>
+                                <tr>
+                                <td><b>Email:</b> {{ user.email }}</td>
+                                </tr>
+                                <tr>
+                                <td><b>Телефон:</b> {{ user.mobile_phone }}</td>
+                                </tr>
+                                <tr>
+                                <td><b>Ваш IP-адрес:</b> {{ ip_address }}</td>
+                                </tr>
+                        </table>
+                        <form method="POST" action="">{% csrf_token %}
+                                {{ form.media }}
+                                {{ form.as_p }}
+                            </form>
+                </div>
+        </div>
+</div>
+
+
+
+
+
+
+<!-- 
+<form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Загрузить изображение</button>
+    </form>
+
+<p>личный кабинет
+        <img src="{{ user_image_url }}" alt="Ваше изображение профиля">
+
+       
+
+        <br/>    
+        Nickname: {{ user.nickname }}
+        <br/>
+        Имя: {{ user.first_name }}
+        <br/>
+        Фамилия: {{ user.last_name }}
+        <br/>
+        Email: {{ user.email }}
+        <br/>
+        Телефон: {{ user.mobile_phone }}
+        <br/>
+        Ваш IP-адрес: {{ ip_address }}
+
+
+</p> -->
+
+{% endblock content %}
+
+
